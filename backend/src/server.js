@@ -60,6 +60,7 @@ app.use(rateLimiter);
 app.use("/api/meetings", meetingsRoutes);
 
 // Health check endpoint
+
 app.get("/healthz", (req, res) => {
   res.json({ status: "ok" });
 });
