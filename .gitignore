@@ -1,0 +1,33 @@
+# === GLOBAL IGNORE ===
+node_modules/
+.env
+dist/
+build/
+.DS_Store
+*.log
+logs/
+*.local
+
+# === FRONTEND ===
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.vscode/
+frontend/.idea/
+
+# === BACKEND ===
+backend/node_modules/
+backend/.env
+backend/logs/
+backend/*.log
+
+# === IDE / OS files ===
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
