@@ -126,18 +126,7 @@ const AboutUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 1.0 }}
           >
-            <motion.div 
-              className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-6 border border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-rotate-1"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.2 }}
-              whileHover={{ 
-                scale: 1.1,
-                rotate: -5,
-                transition: { duration: 0.2 }
-              }}
-            >
+            <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-6 border border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-rotate-1">
               <div className="flex flex-col items-center text-center space-y-3">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,20 +135,9 @@ const AboutUs = () => {
                 </div>
                 <span className="text-gray-800 font-semibold">Individual Project Management</span>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl p-6 border border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-1"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.4 }}
-              whileHover={{ 
-                scale: 1.1,
-                rotate: 5,
-                transition: { duration: 0.2 }
-              }}
-            >
+            <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl p-6 border border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-1">
               <div className="flex flex-col items-center text-center space-y-3">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -168,20 +146,9 @@ const AboutUs = () => {
                 </div>
                 <span className="text-gray-800 font-semibold">Modern Technologies</span>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              className="bg-gradient-to-br from-pink-100 to-pink-200 rounded-xl p-6 border border-pink-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-rotate-1"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.6 }}
-              whileHover={{ 
-                scale: 1.1,
-                rotate: -5,
-                transition: { duration: 0.2 }
-              }}
-            >
+            <div className="bg-gradient-to-br from-pink-100 to-pink-200 rounded-xl p-6 border border-pink-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-rotate-1">
               <div className="flex flex-col items-center text-center space-y-3">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -190,20 +157,9 @@ const AboutUs = () => {
                 </div>
                 <span className="text-gray-800 font-semibold">Competitive Pricing</span>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              className="bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-6 border border-green-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-1"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.8 }}
-              whileHover={{ 
-                scale: 1.1,
-                rotate: 5,
-                transition: { duration: 0.2 }
-              }}
-            >
+            <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-6 border border-green-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-1">
               <div className="flex flex-col items-center text-center space-y-3">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -212,7 +168,7 @@ const AboutUs = () => {
                 </div>
                 <span className="text-gray-800 font-semibold">Long-term Relationships</span>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         </motion.div>
 

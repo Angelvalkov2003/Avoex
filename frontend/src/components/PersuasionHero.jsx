@@ -131,40 +131,22 @@ const PersuasionHero = memo(() => {
             </motion.div>
 
             {/* Benefits grid */}
-            <motion.div 
-              className="grid sm:grid-cols-2 gap-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
-            >
+            <div className="grid sm:grid-cols-2 gap-4">
               {benefits.map((benefit, index) => (
-                <motion.div 
+                <div 
                   key={index} 
-                  className="flex items-start gap-3 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/50 shadow-sm hover:shadow-md transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.8 + index * 0.1 }}
-                  whileHover={{ 
-                    scale: 1.02,
-                    y: -2,
-                    transition: { duration: 0.2 }
-                  }}
-                  whileTap={{ scale: 0.98 }}
+                  className="flex items-start gap-3 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/50 shadow-sm hover:shadow-md hover:scale-105 hover:-translate-y-1 transition-all duration-300"
                 >
-                  <motion.div 
-                    className="flex-shrink-0 w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm"
-                    whileHover={{ rotate: 5 }}
-                    transition={{ duration: 0.2 }}
-                  >
+                  <div className="flex-shrink-0 w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm hover:rotate-3 transition-transform duration-200">
                     {benefit.icon}
-                  </motion.div>
+                  </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-1">{benefit.title}</h3>
                     <p className="text-sm text-gray-600">{benefit.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
 
           </motion.div>
 

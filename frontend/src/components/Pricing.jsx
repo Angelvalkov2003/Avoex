@@ -143,13 +143,7 @@ const Pricing = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
+        <div className="text-center mb-16">
         <h2 className="text-4xl lg:text-5xl font-bold leading-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 pb-1">
   Pricing Plans
 </h2>
@@ -158,33 +152,14 @@ const Pricing = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Choose the perfect plan for your business needs. All plans include detailed consultation and ongoing support.
           </p>
-        </motion.div>
+        </div>
 
         {/* Pricing cards */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pricingPlans.map((plan, index) => (
-            <motion.div
+            <div
               key={plan.id}
-              className="relative bg-white rounded-2xl shadow-xl border-2 border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full"
-              initial={{ opacity: 0, y: 30, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ 
-                duration: 0.6, 
-                delay: 0.1 * index,
-                type: "spring",
-                stiffness: 100
-              }}
-              whileHover={{ 
-                scale: 1.02,
-                transition: { duration: 0.2 }
-              }}
+              className="relative bg-white rounded-2xl shadow-xl border-2 border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full hover:scale-105"
             >
 
               <div className="p-8 flex flex-col h-full">
@@ -241,9 +216,9 @@ const Pricing = () => {
                 </div>
 
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Plan Selection Help */}
         <motion.div 
@@ -290,17 +265,11 @@ const Pricing = () => {
         </motion.div>
 
         {/* Additional information */}
-        <motion.div 
-          className="mt-8 text-center space-y-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
+        <div className="mt-8 text-center space-y-4">
           <p className="text-sm text-gray-600 font-medium">
             All prices are indicative. Final project and maintenance prices are determined during consultation.
           </p>
-        </motion.div>
+        </div>
 
       </div>
     </motion.section>
