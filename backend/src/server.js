@@ -59,6 +59,11 @@ app.use(rateLimiter);
 
 app.use("/api/meetings", meetingsRoutes);
 
+// Health check endpoint
+app.get("/healthz", (req, res) => {
+  res.json({ status: "ok" });
+});
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
