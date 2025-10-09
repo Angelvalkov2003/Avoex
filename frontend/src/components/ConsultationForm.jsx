@@ -489,13 +489,7 @@ const ConsultationForm = memo(() => {
                </motion.div>
 
               {/* Submit button */}
-              <motion.div 
-                className="pt-6"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.25, delay: 0.8 }}
-              >
+              <div className="pt-6">
                 <button 
                   type="submit" 
                   className="btn btn-primary w-full h-16 text-lg font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 border-0 text-white shadow-xl hover:shadow-2xl transition-all duration-150 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
@@ -515,7 +509,7 @@ const ConsultationForm = memo(() => {
                     </div>
                   )}
                 </button>
-              </motion.div>
+              </div>
             </form>
           </motion.div>
         </motion.div>
