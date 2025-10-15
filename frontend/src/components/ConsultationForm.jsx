@@ -178,7 +178,7 @@ const ConsultationForm = memo(() => {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.1 }}
+          transition={{ duration: 0.3}}
           whileHover={{ 
             scale: 1.01,
             transition: { duration: 0.15 }
@@ -190,7 +190,7 @@ const ConsultationForm = memo(() => {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.2 }}
+            transition={{ duration: 0.3}}
           >
             <div className="absolute inset-0 bg-black/10"></div>
             <div className="relative z-10">
@@ -223,7 +223,7 @@ const ConsultationForm = memo(() => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.3 }}
+            transition={{ duration: 0.3}}
           >
             <form onSubmit={handleCreateMeeting} className="space-y-6">
               {/* Name field */}
@@ -232,7 +232,7 @@ const ConsultationForm = memo(() => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.25, delay: 0.4 }}
+                transition={{ duration: 0.25}}
               >
                 <label className="label">
                   <span className="label-text text-lg font-semibold text-gray-700 flex items-center gap-2">
@@ -257,7 +257,7 @@ const ConsultationForm = memo(() => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.25, delay: 0.5 }}
+                transition={{ duration: 0.25}}
               >
                 <label className="label">
                   <span className="label-text text-lg font-semibold text-gray-700 flex items-center gap-2">
@@ -281,7 +281,7 @@ const ConsultationForm = memo(() => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.25, delay: 0.6 }}
+                transition={{ duration: 0.25}}
               >
                 <label className="label">
                   <span className="label-text text-lg font-semibold text-gray-700 flex items-center gap-2">
@@ -306,7 +306,7 @@ const ConsultationForm = memo(() => {
                  initial={{ opacity: 0, y: 30 }}
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
-                 transition={{ duration: 0.3, delay: 0.7 }}
+                 transition={{ duration: 0.3}}
                >
                  <label className="label">
                    <span className="label-text text-lg font-semibold text-gray-700 flex items-center gap-2">

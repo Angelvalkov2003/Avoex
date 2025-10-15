@@ -77,7 +77,7 @@ const WorkProcessTree = memo(() => {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
+        transition={{ duration: 0.6}}
       >
         <div className="inline-block relative">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 animate-fade-in">
@@ -98,7 +98,7 @@ const WorkProcessTree = memo(() => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8}}
         >
           {processSteps.map((step, index) => (
             <motion.div 
@@ -159,7 +159,7 @@ const WorkProcessTree = memo(() => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.6 }}
+        transition={{ duration: 0.8}}
       >
         {/* Enhanced tree trunk/connector line with glow */}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-2 bg-gradient-to-b from-blue-300 via-purple-300 to-emerald-300 h-full rounded-full shadow-lg"></div>
@@ -171,7 +171,7 @@ const WorkProcessTree = memo(() => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8}}
         >
           {processSteps.map((step, index) => (
             <motion.div 
@@ -240,25 +240,7 @@ const WorkProcessTree = memo(() => {
         </motion.div>
       </motion.div>
 
-      {/* Enhanced bottom decoration */}
-      <motion.div 
-        className="mt-12 text-center"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 1.2 }}
-      >
-        <motion.button 
-          onClick={scrollToConsultationForm}
-          className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group cursor-pointer border-0"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse group-hover:animate-bounce"></div>
-          <span className="text-gray-700 font-semibold text-base group-hover:text-gray-800 transition-colors duration-300">Ready to start your project?</span>
-          <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full animate-ping"></div>
-        </motion.button>
-      </motion.div>
+
       </div>
     </motion.div>
   );

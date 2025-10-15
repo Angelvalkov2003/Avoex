@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-gray-300">
                 <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                <span>Bulgaria</span>
+                <span>Bulgaria, Europe</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <Clock className="w-5 h-5 text-purple-400 flex-shrink-0" />
