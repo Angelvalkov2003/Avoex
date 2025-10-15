@@ -5,7 +5,6 @@ import api from "../lib/axios";
 import { parseDateTimeInput, convertToBulgarianTime, convertFromBulgarianTime, generateTimeSlots, isUserFromUS, getUserTimezone, generateBlockedSlots } from "../lib/utils";
 
 const ConsultationForm = memo(() => {
-  // Create form states
   const [client, setClient] = useState("");
   const [content, setContent] = useState("");
   const [email, setEmail] = useState("");
@@ -16,13 +15,10 @@ const ConsultationForm = memo(() => {
   const [loadingSlots, setLoadingSlots] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
   
-  // Get user's timezone automatically - memoized
   const userTimezone = useMemo(() => getUserTimezone(), []);
   
-  // Generate time slots based on user's timezone - memoized
   const timeSlots = useMemo(() => generateTimeSlots(userTimezone), [userTimezone]);
 
-  // Memoized function to load booked slots for a specific date
   const loadBookedSlots = useCallback(async (date) => {
     if (!date) return;
     
@@ -31,15 +27,12 @@ const ConsultationForm = memo(() => {
       const response = await api.get(`/meetings/booked-slots/${date}?timezone=${encodeURIComponent(userTimezone)}`);
       const { bookedSlots } = response.data;
       
-      // Generate all blocked slots (Monday, Wednesday, Friday, daily)
       const blockedSlots = generateBlockedSlots(date, userTimezone);
       
-      // Combine booked slots from backend with all blocked slots
       const allBlockedSlots = [...bookedSlots, ...blockedSlots];
       
-      // Store the booked slots directly as they come from the backend in the client's timezone
       setBookedSlots({
-        bgTimes: allBlockedSlots, // These are already in client timezone from backend
+        bgTimes: allBlockedSlots,
         clientTimes: allBlockedSlots
       });
     } catch (error) {
@@ -58,7 +51,6 @@ const ConsultationForm = memo(() => {
       return;
     }
 
-    // Show confirmation modal
     setShowConfirmation(true);
   };
 

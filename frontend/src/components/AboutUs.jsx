@@ -9,7 +9,6 @@ const AboutUs = () => {
     >
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section title */}
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -26,7 +25,6 @@ const AboutUs = () => {
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto"></div>
         </motion.div>
 
-        {/* Main content with creative card layout */}
         <motion.div 
           className="space-y-12"
           initial={{ opacity: 0, y: 30 }}
@@ -34,7 +32,6 @@ const AboutUs = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8}}
         >
-          {/* Company description cards in a creative layout */}
           <motion.div 
             className="grid lg:grid-cols-2 gap-8"
             initial={{ opacity: 0, y: 20 }}
@@ -42,7 +39,6 @@ const AboutUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6}}
           >
-            {/* Left column - Main story cards */}
             <motion.div 
               className="space-y-6"
               initial={{ opacity: 0, x: -50 }}
@@ -78,7 +74,6 @@ const AboutUs = () => {
               </motion.div>
             </motion.div>
 
-            {/* Right column - Technology and pricing cards */}
             <motion.div 
               className="space-y-6"
               initial={{ opacity: 0, x: 50 }}
@@ -116,7 +111,6 @@ const AboutUs = () => {
             </motion.div>
           </motion.div>
 
-          {/* Key features in a creative grid layout */}
           <motion.div 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
             initial={{ opacity: 0, y: 20 }}

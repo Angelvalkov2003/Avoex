@@ -1,4 +1,3 @@
-// Commented out due to Upstash limit exceeded
 // import { Ratelimit } from "@upstash/ratelimit";
 // import { Redis } from "@upstash/redis";
 
@@ -6,15 +5,12 @@
 
 // dotenv.config();
 
-// //create a ratelimiter that allows 100 requests per 60 sec
 // const ratelimit = new Ratelimit({
 //   redis: Redis.fromEnv(),
 //   limiter: Ratelimit.slidingWindow(20, "60 s"),
 // });
 
 // export default ratelimit;
-
-// Temporary fallback - no rate limiting
 const ratelimit = {
   limit: async () => ({ success: true }),
 };

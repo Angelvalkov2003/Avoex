@@ -2,7 +2,6 @@ import React, { memo, useMemo, useCallback } from "react";
 import { motion } from "framer-motion";
 
 const WorkProcessTree = memo(() => {
-  // Memoized scroll function
   const scrollToConsultationForm = useCallback(() => {
     const consultationForm = document.getElementById('consultation-form');
     if (consultationForm) {
@@ -13,7 +12,6 @@ const WorkProcessTree = memo(() => {
     }
   }, []);
 
-  // Memoize process steps to prevent re-creation
   const processSteps = useMemo(() => [
     {
       id: 1,

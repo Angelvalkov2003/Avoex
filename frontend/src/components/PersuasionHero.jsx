@@ -3,7 +3,6 @@ import { CheckCircle, Star, Shield, Globe, Users, TrendingUp } from 'lucide-reac
 import { motion } from "framer-motion";
 
 const PersuasionHero = memo(() => {
-  // Memoize static data to prevent re-creation on every render
   const benefits = useMemo(() => [
     {
       icon: <Globe className="w-6 h-6 text-blue-500" />,

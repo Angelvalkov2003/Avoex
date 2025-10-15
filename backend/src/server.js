@@ -2,7 +2,7 @@ import express from "express";
 import meetingsRoutes from "./routes/meetingsRoutes.js";
 import { connectDB } from "./config/db.js";
 import dotenv from "dotenv";
-// import rateLimiter from "./middleware/rateLimiter.js"; // Commented out due to Upstash limit exceeded
+// import rateLimiter from "./middleware/rateLimiter.js";
 import {
   securityHeaders,
   validateInput,
@@ -55,7 +55,7 @@ if (process.env.NODE_ENV !== "production") {
 app.use(express.json({ limit: "10mb" }));
 app.use(securityHeaders);
 app.use(validateInput);
-// app.use(rateLimiter); // Commented out due to Upstash limit exceeded
+// app.use(rateLimiter);
 
 app.use("/api/meetings", meetingsRoutes);
 
