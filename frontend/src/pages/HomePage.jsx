@@ -2,18 +2,18 @@ import React, { useState, memo, lazy, Suspense } from "react";
 import Navbar from "../components/Navbar";
 import RateLimitedUI from "../components/RateLimitedUI";
 
-// Lazy load heavy components
+
+const PersuasionHero = lazy(() => import("../components/PersuasionHero"));
 const ConsultationForm = lazy(() => import("../components/ConsultationForm"));
 const WorkProcessTree = lazy(() => import("../components/WorkProcessTree"));
 const AboutUs = lazy(() => import("../components/AboutUs"));
 const Pricing = lazy(() => import("../components/Pricing"));
-const PersuasionHero = lazy(() => import("../components/PersuasionHero"));
 const Footer = lazy(() => import("../components/Footer"));
 
-// Loading component for lazy loaded components
+
 const ComponentLoader = () => (
   <div className="flex justify-center items-center py-20">
-    <div className="loading loading-spinner loading-md text-blue-600"></div>
+    <div className="text-2xl font-bold text-blue-600">Loading...</div>
   </div>
 );
 

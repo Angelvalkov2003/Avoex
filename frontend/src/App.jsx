@@ -9,7 +9,9 @@ const TermsOfService = lazy(() => import("./pages/TermsOfService"))
 // Loading component
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center">
-    <div className="loading loading-spinner loading-lg text-blue-600"></div>
+    <div className="text-8xl lg:text-9xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+      Hello
+    </div>
   </div>
 )
 
