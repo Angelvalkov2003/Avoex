@@ -139,13 +139,7 @@ const Pricing = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="text-center mb-16">
         <h2 className="text-4xl lg:text-5xl font-bold leading-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 pb-1">
   Pricing Plans
 </h2>
@@ -154,15 +148,9 @@ const Pricing = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Choose the perfect plan for your business needs. All plans include detailed consultation and ongoing support.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.id}
@@ -170,7 +158,7 @@ const Pricing = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
             >
 
               <div className="p-8 flex flex-col h-full">
@@ -224,7 +212,7 @@ const Pricing = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         <motion.div 
           className="mt-8 max-w-2xl mx-auto"
@@ -268,17 +256,11 @@ const Pricing = () => {
           </div>
         </motion.div>
 
-        <motion.div 
-          className="mt-8 text-center space-y-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="mt-8 text-center space-y-4">
           <p className="text-sm text-gray-600 font-medium">
             All prices are indicative. Final project and maintenance prices are determined during consultation.
           </p>
-        </motion.div>
+        </div>
 
       </div>
     </motion.section>

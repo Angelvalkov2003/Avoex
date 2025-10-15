@@ -9,13 +9,7 @@ const AboutUs = () => {
     >
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="text-center mb-16">
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
             About{' '}
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -23,35 +17,17 @@ const AboutUs = () => {
             </span>
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto"></div>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          className="space-y-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8}}
-        >
-          <motion.div 
-            className="grid lg:grid-cols-2 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6}}
-          >
-            <motion.div 
-              className="space-y-6"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+        <div className="space-y-12">
+          <div className="grid lg:grid-cols-2 gap-8">
+            <div className="space-y-6">
               <motion.div 
                 className="bg-gradient-to-r from-blue-100 via-purple-100 to-blue-200 rounded-2xl p-6 border border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 <p className="text-lg leading-relaxed text-gray-700">
                   We are a <span className="font-bold text-blue-600">new IT company</span> built by <span className="font-bold text-purple-600">experienced programmers </span>
@@ -65,28 +41,22 @@ const AboutUs = () => {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 <p className="text-lg leading-relaxed text-gray-700">
                   That's why we want each person to manage their own project - acting as both <span className="font-bold text-blue-600">project manager</span> and <span className="font-bold text-purple-600">developer</span>,
                   meeting with clients and programming the solution. This makes the entire process much more <span className="font-bold text-blue-600">optimal</span>.
                 </p>
               </motion.div>
-            </motion.div>
+            </div>
 
-            <motion.div 
-              className="space-y-6"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+            <div className="space-y-6">
               <motion.div 
                 className="bg-gradient-to-bl from-blue-100 via-purple-100 to-blue-200 rounded-2xl p-6 border border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 <p className="text-lg leading-relaxed text-gray-700">
                   We primarily use <span className="font-bold text-purple-600">JavaScript</span> as our main technology,
@@ -100,7 +70,7 @@ const AboutUs = () => {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 <p className="text-lg leading-relaxed text-gray-700">
                   Our <span className="font-bold text-blue-600">pricing is competitive</span> because we don't have unnecessary people and our <span className="font-bold text-purple-600">optimized workflow</span>.
@@ -108,16 +78,10 @@ const AboutUs = () => {
                   individuality and <span className="font-bold text-blue-600">professionalism</span> in everything we do.
                 </p>
               </motion.div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
-          <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6}}
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-6 border border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-rotate-1">
               <div className="flex flex-col items-center text-center space-y-3">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
@@ -161,8 +125,8 @@ const AboutUs = () => {
                 <span className="text-gray-800 font-semibold">Long-term Relationships</span>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
       </div>
     </section>
