@@ -2,20 +2,15 @@ import React, { useState, memo, lazy, Suspense } from "react";
 import Navbar from "../components/Navbar";
 import RateLimitedUI from "../components/RateLimitedUI";
 
+import PersuasionHero from "../components/PersuasionHero";
+import AboutUs from "../components/AboutUs";
 
-const PersuasionHero = lazy(() => import("../components/PersuasionHero"));
 const ConsultationForm = lazy(() => import("../components/ConsultationForm"));
 const WorkProcessTree = lazy(() => import("../components/WorkProcessTree"));
-const AboutUs = lazy(() => import("../components/AboutUs"));
 const Pricing = lazy(() => import("../components/Pricing"));
 const Footer = lazy(() => import("../components/Footer"));
 
-
-const ComponentLoader = () => (
-  <div className="flex justify-center items-center py-20">
-    <div className="text-2xl font-bold text-blue-600">Loading...</div>
-  </div>
-);
+const ComponentLoader = () => <div className="min-h-[200px]"></div>;
 
 const HomePage = memo(() => {
   const [isRateLimited, setRateLimited] = useState(false);
@@ -34,22 +29,16 @@ const HomePage = memo(() => {
       <Navbar />
 
       {/* Persuasion Hero Section */}
-      <Suspense fallback={<ComponentLoader />}>
-        <PersuasionHero />
-      </Suspense>
+      <PersuasionHero />
 
       {/* About Us Section */}
-      <Suspense fallback={<ComponentLoader />}>
-        <AboutUs />
-      </Suspense>
+      <AboutUs />
 
-      <div className="max-w-7xl mx-auto p-4 mt-6">
-        {/* Work Process Tree */}
-        <div id="work-process" className="mb-16">
-          <Suspense fallback={<ComponentLoader />}>
-            <WorkProcessTree />
-          </Suspense>
-        </div>
+      {/* Work Process Tree */}
+      <div className="max-w-7xl mx-auto p-4 mt-6" id="work-process">
+        <Suspense fallback={<ComponentLoader />}>
+          <WorkProcessTree />
+        </Suspense>
       </div>
 
       {/* Pricing Section */}
@@ -57,13 +46,11 @@ const HomePage = memo(() => {
         <Pricing />
       </Suspense>
 
-      <div className="max-w-7xl mx-auto p-4 mt-6">
-        {/* Create Note Form */}
-        <div id="create-form">
-          <Suspense fallback={<ComponentLoader />}>
-            <ConsultationForm />
-          </Suspense>
-        </div>
+      {/* Consultation Form */}
+      <div className="max-w-7xl mx-auto p-4 mt-6" id="create-form">
+        <Suspense fallback={<ComponentLoader />}>
+          <ConsultationForm />
+        </Suspense>
       </div>
 
       {/* Footer */}
@@ -74,5 +61,5 @@ const HomePage = memo(() => {
   );
 });
 
-HomePage.displayName = 'HomePage';
+HomePage.displayName = "HomePage";
 export default HomePage;
