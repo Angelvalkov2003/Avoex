@@ -127,15 +127,16 @@ const Footer = () => {
               </a>
 
               <a
-                href="tel:+359877836667"
+                href="https://api.whatsapp.com/send/?phone=359877836667"
+                target="_blank" rel="noopener noreferrer"
                 className="group flex items-center gap-3 p-3 bg-white/5 hover:bg-white/10 rounded-xl transition-all duration-300 hover:scale-105"
               >
                 <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center group-hover:bg-green-500 transition-colors">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="font-medium text-white">Phone</p>
-                  <p className="text-sm text-gray-400">+359 87 783 6667</p>
+                  <p className="font-medium text-white">WhatsApp</p>
+                  <p className="text-sm text-gray-400">wa.me/359877836667</p>
                 </div>
               </a>
 
