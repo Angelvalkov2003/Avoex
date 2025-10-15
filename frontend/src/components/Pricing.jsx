@@ -6,6 +6,7 @@ import useTimezone from '../hooks/useTimezone';
 const Pricing = () => {
   const { region, isLoading } = useTimezone();
 
+  // Функция за определяне на цените според региона
   const getPricingForRegion = () => {
     if (region === 'america') {
       return {
@@ -17,6 +18,7 @@ const Pricing = () => {
         }
       };
     }
+    // Европа и останалите региони
     return {
       basic: { price: '500', currency: '€' },
       booking: { price: '900', currency: '€' },
@@ -116,6 +118,7 @@ const Pricing = () => {
     }
   ];
 
+  // Показваме loading състояние докато определяме региона
   if (isLoading) {
     return (
       <section id="pricing" className="py-20">
@@ -139,6 +142,7 @@ const Pricing = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section header */}
         <div className="text-center mb-16">
         <h2 className="text-4xl lg:text-5xl font-bold leading-tight bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4 pb-1">
   Pricing Plans
@@ -150,18 +154,16 @@ const Pricing = () => {
           </p>
         </div>
 
+        {/* Pricing cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pricingPlans.map((plan, index) => (
-            <motion.div
+            <div
               key={plan.id}
               className="relative bg-white rounded-2xl shadow-xl border-2 border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full hover:scale-105"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
             >
 
               <div className="p-8 flex flex-col h-full">
+                {/* Plan header */}
                 <div className="text-center mb-8">
                   <div className="flex justify-center mb-4">
                     {plan.icon}
@@ -169,6 +171,7 @@ const Pricing = () => {
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">{plan.name}</h3>
                   <p className="text-gray-600 mb-4">{plan.description}</p>
                   
+                  {/* Price */}
                   <div className="mb-6">
                     {plan.price !== 'Custom' && !plan.price.includes('+') && <span className="text-gray-500 mr-2">around</span>}
                     <span className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -178,6 +181,7 @@ const Pricing = () => {
                   </div>
                 </div>
 
+                {/* Features */}
                 <div className="space-y-4 mb-8 flex-grow">
                   {plan.features.map((feature, index) => (
                     <div key={index} className="flex items-start space-x-3">
@@ -187,7 +191,9 @@ const Pricing = () => {
                   ))}
                 </div>
 
+                {/* Additional services */}
                 <div className="space-y-6 pt-6 border-t border-gray-200 mt-auto">
+                  {/* Maintenance */}
                   <div className="bg-purple-50 rounded-lg p-4">
                     <div className="flex justify-between items-start mb-3">
                       <div>
@@ -210,10 +216,11 @@ const Pricing = () => {
                 </div>
 
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
+        {/* Plan Selection Help */}
         <motion.div 
           className="mt-8 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -235,6 +242,7 @@ const Pricing = () => {
           </div>
         </motion.div>
 
+        {/* Hosting Information Box */}
         <motion.div 
           className="mt-6 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -256,6 +264,7 @@ const Pricing = () => {
           </div>
         </motion.div>
 
+        {/* Additional information */}
         <div className="mt-8 text-center space-y-4">
           <p className="text-sm text-gray-600 font-medium">
             All prices are indicative. Final project and maintenance prices are determined during consultation.
